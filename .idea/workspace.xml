@@ -21,7 +21,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f9a7586-6c4d-4dd0-842f-eb94b10ce914" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.h" beforeDir="false" afterPath="$PROJECT_DIR$/Test.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Time.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/time/Time.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Time.h" beforeDir="false" afterPath="$PROJECT_DIR$/time/Time.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algoritgms/BruteForce.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/algoritgms/BruteForce.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algoritgms/BruteForce.h" beforeDir="false" afterPath="$PROJECT_DIR$/algoritgms/BruteForce.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-51d9d09f80276c54d3e5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-052f7e857dd42d70b24f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-10-19T18-49-19-0909.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-PEA1-Debug-501b8515fc27812f8835.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEA1.dir/Test.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEA1.dir/Test.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEA1.dir/algoritgms/BruteForce.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEA1.dir/algoritgms/BruteForce.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEA1.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEA1.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/PEA1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/PEA1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/p1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +79,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/radom/OneDrive/Pulpit/PEA1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/radom/OneDrive/Pulpit/PEA&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -72,6 +94,9 @@
       <recent name="C:\Users\radom\OneDrive\Pulpit\PEA1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\radom\OneDrive\Pulpit\PEA" />
+      <recent name="C:\Users\radom\OneDrive\Pulpit\PEA\Tests" />
+      <recent name="C:\Users\radom\OneDrive\Pulpit\PEA\time" />
       <recent name="C:\Users\radom\OneDrive\Pulpit\PEA1" />
       <recent name="C:\Users\radom\OneDrive\Pulpit\PEA1\old" />
     </key>
@@ -88,12 +113,12 @@
       </texify-bibtex>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="PEA1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PEA1" TARGET_NAME="PEA1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PEA1" RUN_TARGET_NAME="PEA1">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PEA1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PEA1" TARGET_NAME="PEA1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="PEA1" RUN_TARGET_NAME="PEA1">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -155,7 +180,19 @@
       <workItem from="1697719224525" duration="1000" />
       <workItem from="1697720125599" duration="572000" />
       <workItem from="1697739791624" duration="1274000" />
-      <workItem from="1697741355065" duration="1000" />
+      <workItem from="1697741355065" duration="1728000" />
+      <workItem from="1697812123293" duration="528000" />
+      <workItem from="1697812695910" duration="1266000" />
+      <workItem from="1697814294835" duration="267000" />
+      <workItem from="1697833967205" duration="9416000" />
+      <workItem from="1697843800858" duration="105000" />
+      <workItem from="1697844474380" duration="17000" />
+      <workItem from="1697844571279" duration="20000" />
+      <workItem from="1697845335245" duration="1564000" />
+      <workItem from="1697847114443" duration="20000" />
+      <workItem from="1697847340982" duration="175000" />
+      <workItem from="1698010259193" duration="2738000" />
+      <workItem from="1698065711655" duration="1000" />
     </task>
     <servers />
   </component>

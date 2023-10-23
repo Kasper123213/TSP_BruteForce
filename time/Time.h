@@ -11,8 +11,8 @@ using namespace std;
 using namespace std::chrono;
 class Time {
 private:
-    high_resolution_clock::time_point czasPoczatkowy;
-    high_resolution_clock::time_point czasKoncowy;
+    high_resolution_clock::time_point startTime;
+    high_resolution_clock::time_point stopTime;
 
 
 public:

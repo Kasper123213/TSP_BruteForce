@@ -10,7 +10,7 @@ class BruteForce {
 private:
     int** matrix;
     int matrixSize;
-    int minLenght{};
+    int minLenght = -1;
     int* minPath;
     void perm(int* numbers);
     void perm(int* numbers, int index);

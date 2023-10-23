@@ -12,7 +12,6 @@ BruteForce::BruteForce(int **matrix, int matrixSize) {
     this->matrixSize = matrixSize;
     minPath = new int[matrixSize];
 
-    cout << "Bruteforce jest uruchomiony" << endl;
 }
 
 
@@ -22,6 +21,11 @@ BruteForce::~BruteForce() {
 
 
 void BruteForce::start() {
+    if(matrixSize==1){
+        minLenght = 0;
+        minPath[0] = 0;
+        return;
+    }
     int *arr = new int[matrixSize];
 
     for (int i = 0; i < matrixSize; i++) {
@@ -72,6 +76,7 @@ void BruteForce::checkPath(int *arr) {//todo jesli niema cyklu hamiltona to napi
 
         if (matrix[currentCity][nextCity] != -1) {
             pathLenght += matrix[currentCity][nextCity];
+//            minPath[index] = arr[index];
         } else {
             return;
         }
@@ -81,12 +86,13 @@ void BruteForce::checkPath(int *arr) {//todo jesli niema cyklu hamiltona to napi
     nextCity = arr[0];
     if (matrix[currentCity][nextCity] != -1) {
         pathLenght += matrix[currentCity][nextCity];
+//        minPath[matrixSize-1] = currentCity;
     } else {
         return;
     }
 
 
-    if (pathLenght < minLenght or minLenght == 0) {
+    if (pathLenght < minLenght or minLenght < 0) {
         minLenght = pathLenght;
 
         for(int i=0; i<matrixSize; i++){

@@ -6,31 +6,30 @@
 #define PEA1_TEST_H
 
 #include<iostream>
-#include "Time.h"
+#include "time/Time.h"
 
 using namespace std;
 
 class Test {
 private:
     int matrixSize{};
-    int **matrix;
+    int **matrix{};
     Time time;
+
+
+    void deleteMatrix();
+public:
+    Test();
+    ~Test();
 
     void readFromFile(string path);
 
     void generateData(int maxLen);
 
     void runAlgorithm(int alg);
-
     void printMatrix();
-    void deleteMatrix();
-
-public:
-    Test();
-
-    ~Test();
-
-
+    void startTest();
+    void startAutoTesting();
 };
 
 
