@@ -20,7 +20,7 @@ public:
 
     void stop();
 
-    long getTime();
+    unsigned long long getTime();
 };
 
 

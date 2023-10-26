@@ -13,8 +13,9 @@ Test::Test() {
 
     while (true) {
         cout << "Czy chciałbyś wykonać testowanie automatyczne algorytmów dla wielu wartości? t/n" << endl
-             << "(Opcja do generowania sprawozdania). Aby wyjść naciśnij dowolną inną literę" << endl;
+             << "(Opcja do generowania sprawozdania). Aby wyjść naciśnij dowolną inną literę" <<endl;
         cin >> choice;
+        cout<<endl;
 
         bool autoTest;
         if (choice == 't' or choice == 'T') {
@@ -52,6 +53,7 @@ void Test::startTest(){
         //wybór czynności przez użytkownika
         int choice;
         cin >> choice;
+        cout<<endl;
 
         string path;
         switch (choice) {
@@ -60,6 +62,7 @@ void Test::startTest(){
                 deleteMatrix();
                 cout << "Podaj ścieżkę absolutną do pliku txt"<<endl;
                 cin >> path;
+                cout<<endl;
                 readFromFile(path);
                 break;
             //wygenerowanie macierzy sąsiedstwa o podanej liczbie wierzchołków i maksymalnej długości krawędzi
@@ -68,9 +71,11 @@ void Test::startTest(){
 
                 cout << "Podaj liczbe wierzchołków" << endl;
                 cin >> matrixSize;
+                cout<<endl;
                 cout << "Podaj maksymalną długość ścieżek" << endl;
                 int maxLen;
                 cin >> maxLen;
+                cout<<endl;
                 generateData(maxLen);
                 break;
             //wyświetlenie macierzy sąsiedstwa
@@ -85,6 +90,7 @@ void Test::startTest(){
 
                 int alg;
                 cin >> alg;
+                cout<<endl;
                 runAlgorithm(alg);
                 break;
             default:
@@ -107,8 +113,10 @@ void Test::startAutoTesting(){
     cout << "Testy będą się zaczynały od grafu o 2 wierzchołkach do grafu o rozmiarze podanym przez Ciebie." << endl
     << "Jaki jest maksymalny rozmiar?"<< endl;
     cin >> maxLen;
+    cout<<endl;
     cout << "Po ile grafów ma być wygenerowanych dla każdego kolejnego rozmiaru?"<<endl;
     cin >> instances;
+    cout<<endl;
 
     //dla każdej ilości wierzchołków uruchamiamy test
     for(int len=2; len<=maxLen;len++){
@@ -199,12 +207,8 @@ void Test::generateData(int maxLen) {
                 matrix[i][j] = -1;
                 continue;
             }
-            int newEdge = rand() % maxLen;
-            if (newEdge == 0) {
-                matrix[i][j] = -1;
-            } else {
-                matrix[i][j] = newEdge;
-            }
+            matrix[i][j] = rand() % maxLen + 1;
+
 
         }
 
@@ -227,7 +231,7 @@ void Test::runAlgorithm(int alg) {
         if(minLenght>=0 or matrixSize==1) {
             cout << "\nNajkrótsza ścieżka: ";
             int *minPath = bruteForce->getMinPath();
-            for (int i = 0; i < matrixSize; i++) {
+            for (int i = 0; i <= matrixSize; i++) {
                 cout << minPath[i] << ", ";
             }
             cout << " ma długość: " << bruteForce->getMinLenght() << endl;
@@ -235,7 +239,7 @@ void Test::runAlgorithm(int alg) {
             cout <<"\nGraf nie posiada cyklu hamiltona." << endl;
         }
 
-        cout << "Czas wykonania algorytmu to: " << time.getTime() << "ms\n" << endl;
+        cout << "Czas wykonania algorytmu to: " << time.getTime()/1000000 << "ms\n" << endl<<endl;
 
         delete bruteForce;
     }
@@ -254,7 +258,7 @@ void Test::printMatrix() {
         }
         cout << endl;
     }
-    cout << "Rozmiar grafu: " << matrixSize << endl;
+    cout << "Rozmiar grafu: " << matrixSize << endl<<endl;
 }
 
 //usuwanie macierzy sąsiedstwa z pamięci
@@ -267,4 +271,5 @@ void  Test::deleteMatrix() {
         matrixSize = 0;
 
     }
+    delete[] matrix;
 }
