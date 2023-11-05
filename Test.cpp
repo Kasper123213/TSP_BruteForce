@@ -101,8 +101,8 @@ void Test::startTest(){
 
 //uruchomienie testów automatycznych
 void Test::startAutoTesting(){
-    int maxLen; //12
-    int instances; //100
+    int maxLen;
+    int instances;
     ofstream excelFile("dane.csv");
 
     if (!excelFile.is_open()) {
@@ -203,7 +203,7 @@ void Test::generateData(int maxLen) {
 
     for (int i = 0; i < matrixSize; i++) {
         for (int j = 0; j < matrixSize; j++) {
-            if (i == j) {
+            if (i == j) {   //wierzchołki nie mają krawędzi z samym sobą dlatego gdy indeksy są równe do tablicy wpisujemy -1
                 matrix[i][j] = -1;
                 continue;
             }
