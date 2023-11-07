@@ -226,18 +226,14 @@ void Test::runAlgorithm(int alg) {
         bruteForce->start();
         time.stop();
 
-        int minLenght = bruteForce->getMinLenght();
 
-        if(minLenght>=0 or matrixSize==1) {
-            cout << "\nNajkrótsza ścieżka: ";
-            int *minPath = bruteForce->getMinPath();
-            for (int i = 0; i <= matrixSize; i++) {
-                cout << minPath[i] << ", ";
-            }
-            cout << " ma długość: " << bruteForce->getMinLenght() << endl;
-        }else{
-            cout <<"\nGraf nie posiada cyklu hamiltona." << endl;
+        cout << "\nNajkrótsza ścieżka: ";
+        int *minPath = bruteForce->getMinPath();
+        for (int i = 0; i <= matrixSize; i++) {
+            cout << minPath[i] << ", ";
         }
+        cout << " ma długość: " << bruteForce->getMinLenght() << endl;
+
 
         cout << "Czas wykonania algorytmu to: " << time.getTime()/1000000 << "ms\n" << endl<<endl;
 

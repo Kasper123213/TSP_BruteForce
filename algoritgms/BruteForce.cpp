@@ -12,7 +12,17 @@ BruteForce::BruteForce(int **matrix, int matrixSize) {
     this->matrix = matrix;
     this->matrixSize = matrixSize;
     minPath = new int[matrixSize + 1];
-    minLenght = -1;
+    //ustawiamy górną granice długości ścieżki
+    minLenght = 0;
+    for(int i=0;i<matrixSize;i++){
+        for(int j=0;j<matrixSize;j++){
+            if(i==j)continue;
+
+            minLenght+=matrix[i][j];
+        }
+    }
+    //dodajemy jeden bo dla grafu o dwóch krawędziach minimalna ścieżka jest równa sumie wszystkich ścieżek
+    minLenght+=1;
 
 }
 
@@ -82,30 +92,24 @@ void BruteForce::checkPath(int *arr) {
     int currentCity;
     int nextCity;
 
-    //sprawdzanie czy sciezką da sie przejść
     for (int index = 0; index < matrixSize - 1; index++) {
         currentCity = arr[index];
         nextCity = arr[index + 1];
 
-        //liczenie długości tej ścieżki
-        if (matrix[currentCity][nextCity] != -1) {
-            pathLenght += matrix[currentCity][nextCity];
-        } else {
-            return;
-        }
+        //liczenie długości  ścieżki
+        pathLenght += matrix[currentCity][nextCity];
+        //jeśli dotychczas przebyta ścieżka większa lub rowna najlepszej znanej ścieżce to pomijamy resztę podążania daną permutacją
+        if(pathLenght>=minLenght) return;
     }
 
     currentCity = arr[matrixSize - 1];
     nextCity = arr[0];
     //dodawanieostatniej krwędzi (do wierzchołka 0)
-    if (matrix[currentCity][nextCity] != -1) {
-        pathLenght += matrix[currentCity][nextCity];
-    } else {
-        return;
-    }
+    pathLenght += matrix[currentCity][nextCity];
+
 
     //jeśli ścieżka krótsza od poprzedniej zapisanej to zapamiętujemy ją
-    if (pathLenght < minLenght or minLenght < 0) {
+    if (pathLenght < minLenght) {
         minLenght = pathLenght;
 
         for(int i=0; i<matrixSize; i++){
