@@ -49,6 +49,7 @@ void Test::startTest(){
              "3.Wyświetlenie ostatnio wczytanych lub wygenerowanych danych\n" <<
              "4.Uruchomienie danego algorytmu dla ostatnio wczytanych lub wygenerowanych danych i wyświetlenie wyników\n"
              <<
+
              "0.Wyjście" << endl;
         //wybór czynności przez użytkownika
         int choice;
@@ -84,14 +85,10 @@ void Test::startTest(){
                 break;
             //uruchomienie wybranego algorytmu
             case 4:
-                cout << "Wybierz algorytm:\n" <<
-                     "1.Przegląd zupełny\n" <<
-                     "0.Wyjście" << endl;
+                cout <<"Uruchamiam algorytm przeglądu zupełnego"<< endl;
 
-                int alg;
-                cin >> alg;
                 cout<<endl;
-                runAlgorithm(alg);
+                runAlgorithm();
                 break;
             default:
                 return;
@@ -217,28 +214,27 @@ void Test::generateData(int maxLen) {
 }
 
 //uruchamianie algorytmu oraz pomiar jego czasu wykonania
-void Test::runAlgorithm(int alg) {
+void Test::runAlgorithm() {
 
-    if (alg == 1) {
-        BruteForce* bruteForce = new BruteForce(matrix, matrixSize);
+    BruteForce* bruteForce = new BruteForce(matrix, matrixSize);
 
-        time.start();
-        bruteForce->start();
-        time.stop();
-
-
-        cout << "\nNajkrótsza ścieżka: ";
-        int *minPath = bruteForce->getMinPath();
-        for (int i = 0; i <= matrixSize; i++) {
-            cout << minPath[i] << ", ";
-        }
-        cout << " ma długość: " << bruteForce->getMinLenght() << endl;
+    time.start();
+    bruteForce->start();
+    time.stop();
 
 
-        cout << "Czas wykonania algorytmu to: " << time.getTime()/1000000 << "ms\n" << endl<<endl;
-
-        delete bruteForce;
+    cout << "\nNajkrótsza ścieżka: ";
+    int *minPath = bruteForce->getMinPath();
+    for (int i = 0; i <= matrixSize; i++) {
+        cout << minPath[i] << ", ";
     }
+    cout << " ma długość: " << bruteForce->getMinLenght() << endl;
+
+
+    cout << "Czas wykonania algorytmu to: " << time.getTime()/1000000 << "ms\n" << endl<<endl;
+
+    delete bruteForce;
+
 }
 
 //wyświetlanie macierzy sąsiedstwa

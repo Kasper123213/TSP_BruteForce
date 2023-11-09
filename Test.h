@@ -26,7 +26,7 @@ public:
 
     void generateData(int maxLen);
 
-    void runAlgorithm(int alg);
+    void runAlgorithm();
     void printMatrix();
     void startTest();
     void startAutoTesting();
