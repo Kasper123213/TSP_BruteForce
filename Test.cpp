@@ -17,20 +17,14 @@ Test::Test() {
         cin >> choice;
         cout<<endl;
 
-        bool autoTest;
         if (choice == 't' or choice == 'T') {
-            autoTest = true;
+            startAutoTesting();
         } else if (choice == 'n' or choice == 'N') {
-            autoTest = false;
+            startTest();
         } else {
             return;
         }
 
-        if (autoTest) {
-            startAutoTesting();
-        } else {
-            startTest();
-        }
     }
 }
 
@@ -43,11 +37,12 @@ Test::~Test() {
 //uruchomienie testów algorytmu
 void Test::startTest(){
     while (true){
+
         cout << "Co chcesz zrobić?\n" <<
              "1.Wczytanie danych z pliku\n" <<
              "2.Wygenerowanie danych losowych\n" <<
              "3.Wyświetlenie ostatnio wczytanych lub wygenerowanych danych\n" <<
-             "4.Uruchomienie danego algorytmu dla ostatnio wczytanych lub wygenerowanych danych i wyświetlenie wyników\n"
+             "4.Uruchomienie algorytmu przeglądu zupełnego dla ostatnio wczytanych danych\n"
              <<
 
              "0.Wyjście" << endl;
@@ -85,10 +80,11 @@ void Test::startTest(){
                 break;
             //uruchomienie wybranego algorytmu
             case 4:
-                cout <<"Uruchamiam algorytm przeglądu zupełnego"<< endl;
-
-                cout<<endl;
-                runAlgorithm();
+                if(matrixSize!=0) {
+                    runAlgorithm();
+                }else{
+                    cout<<"Najpierw wczytaj graf"<<endl<<endl;
+                }
                 break;
             default:
                 return;
@@ -222,7 +218,7 @@ void Test::runAlgorithm() {
     bruteForce->start();
     time.stop();
 
-
+    cout<<"#############################################################################################"<<endl;
     cout << "\nNajkrótsza ścieżka: ";
     int *minPath = bruteForce->getMinPath();
     for (int i = 0; i <= matrixSize; i++) {
@@ -231,8 +227,8 @@ void Test::runAlgorithm() {
     cout << " ma długość: " << bruteForce->getMinLenght() << endl;
 
 
-    cout << "Czas wykonania algorytmu to: " << time.getTime()/1000000 << "ms\n" << endl<<endl;
-
+    cout << "Czas wykonania algorytmu to: " << time.getTime()/1000000 << "ms\n" << endl;
+    cout<<"#############################################################################################"<<endl<<endl;
     delete bruteForce;
 
 }
@@ -240,7 +236,7 @@ void Test::runAlgorithm() {
 //wyświetlanie macierzy sąsiedstwa
 void Test::printMatrix() {
     if(matrixSize==0){
-        cout<<"Tablica jest pusta"<<endl;
+        cout<<"Tablica jest pusta"<<endl<<endl;
         return;
     }
     cout << "Tabela sąsiedstwa z wagami:" << endl;

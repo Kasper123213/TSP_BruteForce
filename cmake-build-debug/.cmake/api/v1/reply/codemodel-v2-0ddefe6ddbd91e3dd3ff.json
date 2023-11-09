@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/radom/OneDrive/Pulpit/PEA/cmake-build-debug",
-		"source" : "C:/Users/radom/OneDrive/Pulpit/PEA"
+		"build" : "C:/Users/radom/OneDrive/Pulpit/PEA/BruteForce/cmake-build-debug",
+		"source" : "C:/Users/radom/OneDrive/Pulpit/PEA/BruteForce"
 	},
 	"version" : 
 	{

@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/radom/OneDrive/Pulpit/PEA/cmake-build-debug"
+			"value" : "c:/Users/radom/OneDrive/Pulpit/PEA/BruteForce/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/radom/OneDrive/Pulpit/PEA/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/radom/OneDrive/Pulpit/PEA/BruteForce/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/radom/OneDrive/Pulpit/PEA"
+			"value" : "C:/Users/radom/OneDrive/Pulpit/PEA/BruteForce"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1263,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/radom/OneDrive/Pulpit/PEA/cmake-build-debug"
+			"value" : "C:/Users/radom/OneDrive/Pulpit/PEA/BruteForce/cmake-build-debug"
 		},
 		{
 			"name" : "PEA1_IS_TOP_LEVEL",
@@ -1287,7 +1287,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/radom/OneDrive/Pulpit/PEA"
+			"value" : "C:/Users/radom/OneDrive/Pulpit/PEA/BruteForce"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
