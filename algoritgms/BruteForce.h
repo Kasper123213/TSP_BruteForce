@@ -1,7 +1,3 @@
-//
-// Created by radom on 18.10.2023.
-//
-
 #ifndef PEA1_BRUTEFORCE_H
 #define PEA1_BRUTEFORCE_H
 

@@ -1,7 +1,3 @@
-//
-// Created by radom on 18.10.2023.
-//
-
 #include<iostream>
 #include "BruteForce.h"
 
@@ -33,13 +29,7 @@ BruteForce::~BruteForce() {
 
 // metoda start uruchamia algorytm brute force
 void BruteForce::start() {
-    //zabezpieczenie na wypadek gdyby graf miał tylko jeden wierzchołek
-    if(matrixSize==1){
-        minLenght = 0;
-        minPath[0] = 0;
-        minPath[matrixSize] = 0;
-        return;
-    }
+
     int *arr = new int[matrixSize];
 
     //Wypełnienie tablicy roboczej kolejnymi indeksami wierzchołków grafu
@@ -107,7 +97,6 @@ void BruteForce::checkPath(int *arr) {
     //dodawanieostatniej krwędzi (do wierzchołka 0)
     pathLenght += matrix[currentCity][nextCity];
 
-
     //jeśli ścieżka krótsza od poprzedniej zapisanej to zapamiętujemy ją
     if (pathLenght < minLenght) {
         minLenght = pathLenght;
@@ -115,7 +104,6 @@ void BruteForce::checkPath(int *arr) {
         for(int i=0; i<matrixSize; i++){
             minPath[i] = arr[i];
         }
-
     }
 }
 

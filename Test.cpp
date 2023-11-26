@@ -1,7 +1,3 @@
-//
-// Created by radom on 18.10.2023.
-//
-
 #include <fstream>
 #include "Test.h"
 #include "algoritgms/BruteForce.h"

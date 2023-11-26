@@ -8,7 +8,7 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);    //ustawianie polskich znaków
 
 
-    cout << "Autor: Kasper Radom 264023" << endl << endl;
+    cout << "Autor: Kasper Radom 264023" << endl <<"Algorytm przeglądu zupełnego"<<endl<< endl;
 
     //inicjowanie pamięci na włączenie testów
     Test *test = new Test;

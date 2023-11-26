@@ -1,7 +1,3 @@
-//
-// Created by radom on 18.10.2023.
-//
-
 #include "Time.h"
 
 //włączanie "stopera", zapisywanie obecnego czasu do zmiennej startTime

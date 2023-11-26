@@ -1,6 +1,3 @@
-//
-// Created by radom on 18.10.2023.
-//
 #include <iostream>
 #include <chrono>
 
